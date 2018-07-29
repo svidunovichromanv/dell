@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .container{
+            display: inline-block;
+            margin: 10px;
+        }
+        .clock {
+            position: relative;
+            z-index: -20;
+            width: 220px;
+            height: 220px;
+            border-radius: 100%;
+            background-color: #fcca66;
+        }
+
+        .sec{
+            position: absolute;
+            top: 30px;
+            left: 109px;
+            width: 2px;
+            height: 90px;
+            padding: 0;
+            border-radius: 1px;
+            transform-origin: 1px 80px 0;
+            background-color: #2b2a29;
+        }
+
+        .min{
+            position: absolute;
+            top: 40px;
+            left: 108px;
+            width: 4px;
+            height: 80px;
+            padding: 0;
+            border-radius: 2px;
+            transform-origin: 2px 70px 0;
+            background-color: #2b2a29;
+        }
+        .hour{
+            position: absolute;
+            top: 50px;
+            left: 106px;
+            width: 8px;
+            height: 70px;
+            padding: 0;
+            border-radius: 4px;
+            transform-origin: 4px 60px 0;
+            background-color: #2b2a29;
+        }
+
+        .h {
+            position: absolute;
+            top: 10px;
+            left: 97px;
+            width: 26px;
+            height: 26px;
+            transform-origin: 50% 97px 0;
+            background-color: #48b382;
+            border-radius: 100%;
+            color: #2b2a29;
+        }
+
+        .h1 {
+            transform: rotate(30deg);
+        }
+
+        .h2 {
+            transform: rotate(60deg);
+        }
+
+        .h3 {
+            transform: rotate(90deg);
+        }
+
+        .h4 {
+            transform: rotate(120deg);
+        }
+
+        .h5 {
+            transform: rotate(150deg);
+        }
+
+        .h6 {
+            transform: rotate(180deg);
+        }
+
+        .h7 {
+            transform: rotate(210deg);
+        }
+
+        .h8 {
+            transform: rotate(240deg);
+        }
+
+        .h9 {
+            transform: rotate(270deg);
+        }
+
+        .h10 {
+            transform: rotate(300deg);
+        }
+        .h11 {
+            transform: rotate(330deg);
+        }
+        .h12 {
+            transform: rotate(360deg);
+        }
+
+    </style>
+</head>
+<body>
+<script type="module">
+    import { View } from './View.js';
+    import { Model } from './Model.js';
+    import { Controller } from './Controller.js';
+    const model = new Model();
+    const controller = new Controller(
+        model,
+        new View(model, document.body, -4)
+    );
+
+    const model2 = new Model();
+    const controller2 = new Controller(
+        model2,
+        new View(model2, document.body, 0)
+    );
+
+    const model3 = new Model();
+    const controller3 = new Controller(
+        model3,
+        new View(model3, document.body, 1)
+    );
+
+    const model4 = new Model();
+    const controller4 = new Controller(
+        model4,
+        new View(model4, document.body, 3)
+    );
+
+    const model5 = new Model();
+    const controller5 = new Controller(
+        model5,
+        new View(model5, document.body, 9)
+    );
+
+    const model6 = new Model();
+    const controller6 = new Controller(
+        model6,
+        new View(model6, document.body, 10)
+    );
+</script>
+</body>
+</html>
